@@ -1,0 +1,35 @@
+/* 縦並び */
+.grid-stack-row {
+    display: grid;
+    grid-gap: 5px; /* グリッド間の余白 */
+    grid-template-columns: 150px 1fr; /* 1frは残りの余白すべて */
+}
+
+/* 横並び */
+.grid-stack-column {
+    display: grid;
+    grid-gap: 5px; /* グリッド間の余白 */
+    grid-template-rows: 50px 200px;
+    grid-auto-flow: column;
+}
+
+
+.grid-area-assign { 
+    display: grid;
+    grid-template-columns: 350px 1fr 600px;
+    grid-gap: 20px;
+
+    grid-template-areas: 
+        "direct direct others"
+        "kouzou shiage others"
+        "kouzou shiage setubi"
+        "kouzou shiage keihi";
+}
+
+.group-direct { grid-area: direct }
+.group-others { grid-area: others }
+.group-kouzou { grid-area: kouzou }
+.group-shiage { grid-area: shiage }
+.group-setubi { grid-area: setubi }
+.group-keihi { grid-area: keihi }
+
